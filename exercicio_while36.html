@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisores</title>
+</head>
+<body>
+    <h1>Divisores</h1>
+    <script>
+        
+        let numero = parseInt(prompt("Digite um número inteiro positivo:"), 10);
+
+        if (parseInt(numero) == numero && numero > 0) {
+            let resultado = "<h2>Divisores de " + numero + ":</h2>";
+
+            
+            for (let i = 1; i <= numero; i++) {
+                if (numero % i === 0) {
+                    resultado += i + "<br>"; 
+                }
+            }
+
+            document.write(resultado);
+        } else {
+            document.write("<h2>Entrada inválida. Por favor, insira um número inteiro positivo.</h2>");
+        }
+    </script>
+</body>
+</html>

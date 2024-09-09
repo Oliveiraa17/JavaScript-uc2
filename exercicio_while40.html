@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+    <h1>Sequência de Fibonacci</h1>
+    <script>
+       
+        let a = 0;
+        let b = 1;
+
+         let resultado = "<h2>Primeiros 20 números da sequência de Fibonacci:</h2>";
+
+        resultado += a + "<br>" + b + "<br>";
+
+        let count = 2; 
+        while (count < 20) {
+            let proximo = a + b;
+            resultado += proximo + "<br>";
+            a = b; 
+            b = proximo; 
+            count++;r
+        }
+
+        document.write(resultado);
+    </script>
+</body>
+</html>

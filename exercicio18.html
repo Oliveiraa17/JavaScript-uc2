@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa Mais Nova</title>
+</head>
+<body>
+
+    <h1>Identificar a Pessoa Mais Nova</h1>
+    <button onclick="encontrarMaisNova()">Encontrar Pessoa Mais Nova</button>
+    <p id="resultado"></p>
+
+    <script>
+        function encontrarMaisNova() {
+            let nomeMaisNovo = "";
+            let idadeMaisNova = Infinity; 
+
+   
+            for (let i = 1; i <= 10; i++) {
+                let nome = prompt(`Digite o nome da pessoa ${i}:`);
+                let idade = parseInt(prompt(`Digite a idade de ${nome}:`));
+
+                
+                if (!isNaN(idade) && idade < idadeMaisNova) {
+                    idadeMaisNova = idade;
+                    nomeMaisNovo = nome;
+                }
+            }
+
+
+            document.getElementById("resultado").innerText = 
+                `A pessoa mais nova é ${nomeMaisNovo} com ${idadeMaisNova} anos.`;
+        }
+    </script>
+
+</body>
+</html>

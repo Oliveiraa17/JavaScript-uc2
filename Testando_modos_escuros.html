@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Modo Escuro</title>
+    <style>
+        body{
+            background-color: rgb(252, 252, 252);
+            color: red;
+            text-align: center;
+        }
+
+        .myimage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body class="fundo">
+    <h1 id="titulo">Testando mudança de cor de fundo Body, a cor da donte e a imagem na pagina</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti expedita beatae quas fugiat repellendus alias! Totam porro culpa non aspernatur, beatae molestiae. Molestias modi molestiae natus aspernatur, recusandae labore enim?</p>
+    
+    <input type ="button" id="modo escuro" value="modo escuro" onclick="preto()" />
+    <input type ="button" id="modo daltonico" value="modo daltonico" onclick="rosa()" />
+    <input type ="button" id="modo normal" value="modo normal" onclick="branco()" />
+    <input type ="button" id="A+" value="A+" onclick="azul()" />
+    
+    <hr />
+
+    <img src="../imagens/Icarus.jpeg" class="myimage"/>
+
+    <script>
+
+        let header = document.getElementById("titulo");
+
+        function branco(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color="red";
+            document.querySelector(".fundo").style.fontSize="15px";
+            header.innerHTML="Testando mudança de cor de fundo Body, a cor da donte e a imagem na pagina"
+            document.querySelector("#titulo").style.color="gray";
+        }
+        function preto(){
+            document.querySelector(".fundo").style.backgroundColor="black";
+            document.querySelector(".fundo").style.color="gray";
+            document.querySelector(".fundo").style.fontSize="15px";
+            header.innerHTML="Testando o Modo escuro"
+            document.querySelector("#titulo").style.color="red";
+        }
+        function rosa(){
+            document.querySelector(".fundo").style.backgroundColor="pink";
+            document.querySelector(".fundo").style.color="green";
+            document.querySelector(".fundo").style.fontSize="15px";
+             header.innerHTML="Modo daltonico"
+             document.querySelector("#titulo").style.color="Black";
+        }
+        function azul(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color="black";
+            document.querySelector(".fundo").style.fontSize="30px";
+             header.innerHTML="Modo A+"
+             document.querySelector("#titulo").style.color="blue";
+        }
+    </script>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sit, velit consequatur natus soluta sed minima quam unde veritatis cumque consequuntur eaque earum illo! Nesciunt ullam mollitia culpa perspiciatis. Sequi.</p>
+
+</body>
+</html>

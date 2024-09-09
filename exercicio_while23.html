@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+    <h1>Sequência de Fibonacci</h1>
+    <script>
+        let limite = parseInt(prompt("Digite um número inteiro:"), 10);
+
+        if (limite >= 0) {
+            let a = 0; 
+            let b = 1; 
+
+            document.write("<h2>Sequência de Fibonacci até " + limite + ":</h2>");
+
+            do {
+                document.write(a + "<br>");
+                let proximo = a + b; 
+                a = b; 
+                b = proximo; 
+            } while (a <= limite);
+        } else {
+            document.write("<h2>Por favor, insira um número inteiro não-negativo.</h2>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média Aritmética</title>
+</head>
+<body>
+    <h1>Cálculo da Média Aritmética</h1>
+    <script>
+        let total = 0;
+        let i = 0;
+
+        while (i < 5) {
+            let numero = parseInt(prompt("Digite um número:"));
+
+            if (!isNaN(numero)) {
+                total += numero;
+                i++;
+            } else {
+                alert("Por favor, digite um número válido.");
+            }
+        }
+
+        let media = total / 5;
+        document.write("A média aritmética dos números é: " + media);
+    </script>
+</body>
+</html>

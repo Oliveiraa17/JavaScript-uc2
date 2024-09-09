@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média das Idades</title>
+</head>
+<body>
+    <h2>Digite a idade de 20 pessoas</h2>
+    <form id="idadeForm">
+        <div id="inputs">
+        </div>
+        <button type="button" onclick="calcularMedia()">Calcular Média</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function criarInputs() {
+            const inputsDiv = document.getElementById('inputs');
+            for (let i = 1; i <= 20; i++) {
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.placeholder = `Idade ${i}`;
+                input.required = true;
+                inputsDiv.appendChild(input);
+                inputsDiv.appendChild(document.createElement('br'));
+            }
+        }
+
+        function calcularMedia() {
+            const inputs = document.querySelectorAll('#inputs input');
+            let soma = 0;
+            let contador = 0;
+
+            inputs.forEach(input => {
+                const valor = parseInt(input.value);
+                if (!isNaN(valor)) {
+                    soma += valor;
+                    contador++;
+                }
+            });
+
+            const media = soma / contador;
+            document.getElementById('resultado').textContent = 
+                `A média das idades é: ${media.toFixed(2)}`;
+        }
+
+        criarInputs();
+    </script>
+</body>
+</html>

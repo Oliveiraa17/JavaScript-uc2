@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma dos Números Pares</title>
+</head>
+<body>
+    <h1>Soma dos Números Pares</h1>
+    <script>
+        
+        let limite = parseInt(prompt("Digite um número inteiro:"), 10);
+
+        
+        if (parseInt(limite) == limite && limite > 0) {
+            let soma = 0;
+
+            
+            for (let i = 2; i <= limite; i += 2) {
+                soma += i; 
+            }
+
+           
+            document.write("<h2>A soma de todos os números pares entre 1 e " + limite + " é: " + soma + "</h2>");
+        } else {
+            document.write("<h2>Entrada inválida. Por favor, insira um número inteiro maior que 0.</h2>");
+        }
+    </script>
+</body>
+</html>

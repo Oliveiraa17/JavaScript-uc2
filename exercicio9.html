@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Salários Mínimos</title>
+</head>
+<body>
+    <h1>Cálculo de Salários Mínimos</h1>
+    <script>
+        // Valor fixo do salário mínimo
+        const salarioMinimo = 1212.00;
+
+        // Função para calcular e exibir a quantidade de salários mínimos
+        function calcularSalariosMinimos() {
+            // Leitura do valor do salário do usuário
+            const salarioUsuario = parseFloat(prompt("Digite o valor do seu salário:"));
+
+            // Cálculo da quantidade de salários mínimos
+            const quantidadeSalariosMinimos = salarioUsuario / salarioMinimo;
+
+            // Exibindo o resultado
+            document.write("<p>O seu salário é equivalente a " + quantidadeSalariosMinimos.toFixed(2) + " salários mínimos.</p>");
+        }
+
+        // Executa a função para calcular e exibir a quantidade de salários mínimos
+        calcularSalariosMinimos();
+    </script>
+</body>
+</html>

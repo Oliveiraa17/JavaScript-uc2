@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+    <h1>Sequência de Fibonacci</h1>
+    <script>
+        
+        let limite = parseInt(prompt("Digite um número inteiro para limitar a sequência de Fibonacci:"), 10);
+
+        
+        if (parseInt(limite) == limite && limite > 0) {
+            let resultado = "<h2>Sequência de Fibonacci até " + limite + ":</h2>";
+
+            let a = 0; 
+            let b = 1; 
+
+           
+            resultado += a + "<br>";
+
+            
+            while (b <= limite) {
+                resultado += b + "<br>";
+                let temp = a; 
+                a = b; 
+                b = temp + b; 
+            }
+
+        } else {
+            document.write("<h2>Entrada inválida. Por favor, insira um número inteiro maior que 0.</h2>");
+        }
+    </script>
+</body>
+</html>

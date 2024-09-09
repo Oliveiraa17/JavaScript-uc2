@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <script>
+        
+        let numero = parseInt(prompt("Digite um número inteiro:"), 10);
+
+        
+        if (parseInt(numero) == numero) {
+            let resultado = "<h2>Tabuada de " + numero + ":</h2>";
+
+            
+            for (let i = 1; i <= 10; i++) {
+                resultado += numero + " x " + i + " = " + (numero * i) + "<br>";
+            }
+
+            document.write(resultado);
+        } else {
+            document.write("<h2>Entrada inválida. Por favor, insira um número inteiro.</h2>");
+        }
+    </script>
+</body>
+</html>

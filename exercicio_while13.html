@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dígitos de um Número</title>
+</head>
+<body>
+    <h1>Dígitos de um Número</h1>
+    <script>
+        let numero = prompt("Digite um número inteiro:");
+
+        numero = parseInt(numero, 10);
+       
+        if (numero || numero === 0) {
+            
+            numero = Math.abs(numero);
+
+            document.write("<h2>Dígitos de " + numero + ":</h2>");
+            
+            let digito;
+
+            while (numero > 0) {
+                digito = numero % 10;
+                document.write(digito + "<br>");
+                numero = Math.floor(numero / 10);
+            }
+        } else {
+            document.write("Por favor, insira um número inteiro válido.");
+        }
+    </script>
+</body>
+</html>

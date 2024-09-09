@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dígitos do Número</title>
+</head>
+<body>
+    <h1>Dígitos do Número</h1>
+    <script>
+        
+        let numero = prompt("Digite um número inteiro:");
+
+        if (numero !== null && numero.trim() !== "" && Number.parseInt(numero) == numero) {
+            let resultado = "<h2>Dígitos de " + numero + ":</h2>";
+
+            numero = numero.toString();
+
+            for (let i = 0; i < numero.length; i++) {
+                resultado += numero[i] + "<br>"; 
+            }
+
+            document.write(resultado);
+        } else {
+            document.write("<h2>Entrada inválida. Por favor, insira um número inteiro.</h2>");
+        }
+    </script>
+</body>
+</html>

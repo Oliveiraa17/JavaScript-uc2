@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número Primo</title>
+</head>
+<body>
+    <h1>Verificar Número Primo</h1>
+    <script>
+        let numero = parseInt(prompt("Digite um número inteiro:"), 10);
+        
+        if (numero > 1) { 
+            let divisor = 2;
+            let ehPrimo = true; 
+
+            do {
+                if (numero % divisor === 0) {
+                    ehPrimo = false; 
+                    break; 
+                }
+                divisor++;
+            } while (divisor <= Math.sqrt(numero)); 
+
+            if (ehPrimo) {
+                document.write("<h2>" + numero + " é um número primo.</h2>");
+            } else {
+                document.write("<h2>" + numero + " não é um número primo.</h2>");
+            }
+        } else {
+            document.write("<h2>Por favor, insira um número inteiro maior que 1.</h2>");
+        }
+    </script>
+</body>
+</html>

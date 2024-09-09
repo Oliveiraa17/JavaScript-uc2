@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Situação de Voto</title>
+</head>
+<body>
+    <h1>Verificar Situação de Voto</h1>
+
+    <script>
+        let idade = parseInt(prompt("Digite a sua idade: "));
+
+        if (idade < 16) {
+            document.write("Você não vota.<br>");
+        } else if ((idade >= 16 && idade < 18) || idade >= 70) {
+            document.write("Seu voto é opcional.<br>");
+        } else {
+            document.write("Seu voto é obrigatório.<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Números Entre 0 e 100</title>
+</head>
+<body>
+    <h1>Contar Números Entre 0 e 100</h1>
+    <p>Digite 20 números:</p>
+    
+    <form id="formulario">
+        <div id="inputs">
+        
+            <input type="number" class="numero" placeholder="Número 1" required><br>
+            <input type="number" class="numero" placeholder="Número 2" required><br>
+            <input type="number" class="numero" placeholder="Número 3" required><br>
+            <input type="number" class="numero" placeholder="Número 4" required><br>
+            <input type="number" class="numero" placeholder="Número 5" required><br>
+            <input type="number" class="numero" placeholder="Número 6" required><br>
+            <input type="number" class="numero" placeholder="Número 7" required><br>
+            <input type="number" class="numero" placeholder="Número 8" required><br>
+            <input type="number" class="numero" placeholder="Número 9" required><br>
+            <input type="number" class="numero" placeholder="Número 10" required><br>
+            <input type="number" class="numero" placeholder="Número 11" required><br>
+            <input type="number" class="numero" placeholder="Número 12" required><br>
+            <input type="number" class="numero" placeholder="Número 13" required><br>
+            <input type="number" class="numero" placeholder="Número 14" required><br>
+            <input type="number" class="numero" placeholder="Número 15" required><br>
+            <input type="number" class="numero" placeholder="Número 16" required><br>
+            <input type="number" class="numero" placeholder="Número 17" required><br>
+            <input type="number" class="numero" placeholder="Número 18" required><br>
+            <input type="number" class="numero" placeholder="Número 19" required><br>
+            <input type="number" class="numero" placeholder="Número 20" required><br>
+        </div>
+        <button type="button" onclick="contarEntre0e100()">Contar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function contarEntre0e100() {
+          
+            let numeros = document.querySelectorAll('.numero');
+            let contador = 0;
+
+           
+            numeros.forEach(input => {
+                let valor = parseFloat(input.value);
+                if (valor >= 0 && valor <= 100) {
+                    contador++;
+                }
+            });
+
+            document.getElementById('resultado').textContent = `Quantidade de números entre 0 e 100: ${contador}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Soma</title>
+</head>
+<body>
+    <h1>Calculadora de Soma</h1>
+    <p>Digite 10 números:</p>
+    <form id="numberForm">
+        <div id="inputsContainer">
+            
+        </div>
+        <button type="button" onclick="calculateSum()">Calcular Soma</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function createInputs() {
+            const container = document.getElementById('inputsContainer');
+            for (let i = 0; i < 10; i++) {
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.id = 'num' + i;
+                input.placeholder = 'Número ' + (i + 1);
+                container.appendChild(input);
+                container.appendChild(document.createElement('br'));
+            }
+        }
+
+        function calculateSum() {
+            let sum = 0;
+            for (let i = 0; i < 10; i++) {
+                const num = parseFloat(document.getElementById('num' + i).value);
+                if (!isNaN(num)) {
+                    sum += num;
+                }
+            }
+            document.getElementById('result').innerText = 'Soma: ' + sum;
+        }
+
+        window.onload = createInputs;
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteúdo no Javascript</title>
+
+    <style>
+        body{
+            background-color: rgb(95, 97, 93);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .myimage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body class ="fundo">
+    <h1>Testando mudança de cor de funfo Body , a cor de fonte e a imagem na página</h1>
+
+    <input type ="button" id="cinza" value="cor cinza" onclick="cinza()" />
+    <input type ="button" id="amarelo" value="cor amarelo" onclick="amarelo()" />
+    <input type ="button" id="azul" value="cor auzl" onclick="azul()" />
+    <hr />
+
+    <img src="../imagens/Icarus.jpeg" class="myimage"/>
+
+    <script>
+        function cinza(){
+            document.querySelector(".fundo").style.backgroundColor="gray";
+            document.querySelector(".fundo").style.color="black";
+            document.querySelector(".myimage").src="../imagens/Icarus.jpeg";
+        }
+        function amarelo(){
+            document.querySelector(".fundo").style.backgroundColor="yellow";
+            document.querySelector(".fundo").style.color="black";
+            document.querySelector(".myimage").src="../imagens/yago.jpeg";
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Ímpares de 50 a 1</title>
+</head>
+<body>
+    <h1>Números Ímpares de 50 a 1</h1>
+    <script>
+        
+        let inicio = 50;
+        let resultado = "<h2>Números ímpares de 50 a 1:</h2>";
+
+        for (let i = inicio; i >= 1; i--) {
+            if (i % 2 !== 0) { 
+                resultado += i + "<br>"; 
+            }
+        }
+
+        document.write(resultado);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do Valor Total com IPI</title>
+</head>
+<body>
+    <h1>Cálculo do Valor Total com IPI</h1>
+    <script>
+       
+        function calcularValorTotal() {
+       
+            const ipi = parseFloat(prompt("Digite a porcentagem do IPI a ser acrescido (em %):"));
+            
+            
+            const codigoPeca1 = prompt("Digite o código da peça 1:");
+            const valorUnitarioPeca1 = parseFloat(prompt("Digite o valor unitário da peça 1:"));
+            const quantidadePeca1 = parseInt(prompt("Digite a quantidade de peças 1:"));
+
+          
+            const codigoPeca2 = prompt("Digite o código da peça 2:");
+            const valorUnitarioPeca2 = parseFloat(prompt("Digite o valor unitário da peça 2:"));
+            const quantidadePeca2 = parseInt(prompt("Digite a quantidade de peças 2:"));
+
+            const valorTotalSemIPI = (valorUnitarioPeca1 * quantidadePeca1) + (valorUnitarioPeca2 * quantidadePeca2);
+
+          
+            const valorTotalComIPI = valorTotalSemIPI * (ipi / 100 + 1);
+
+            document.write("<p>O valor total a ser pago com IPI é: R$ " + valorTotalComIPI.toFixed(2) + "</p>");
+        }
+
+       
+        calcularValorTotal();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar numeros maiores </title>
+</head>
+<body>
+    <h1>Contar Números Maiores que 8</h1>
+    <button onclick="contarMaioresQueOito()">Contar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function contarMaioresQueOito() {
+            let contador = 0;
+
+           
+            for (let i = 1; i <= 20; i++) {
+                let numero = parseFloat(prompt(`Digite o número ${i}:`));
+
+                
+                if (!isNaN(numero) && numero > 8) {
+                    contador++;
+                }
+            }
+
+          
+            document.getElementById("resultado").innerText = 
+                `Quantidade de números maiores que 8: ${contador}`;
+        }
+    </script>
+</body>
+</html>

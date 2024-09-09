@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma das Idades</title>
+</head>
+<body>
+    <h1>Calculadora de Soma das Idades</h1>
+    <p>Digite as idades de 20 pessoas:</p>
+    <form id="ageForm">
+        <div id="inputsContainer">
+            
+        </div>
+        <button type="button" onclick="calculateSum()">Calcular Soma</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        
+        function createInputs() {
+            const container = document.getElementById('inputsContainer');
+            for (let i = 0; i < 20; i++) {
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.id = 'age' + i;
+                input.placeholder = 'Idade ' + (i + 1);
+                input.min = 0; // Definindo o valor mínimo para 0
+                container.appendChild(input);
+                container.appendChild(document.createElement('br'));
+            }
+        }
+        function calculateSum() {
+            let sum = 0;
+            for (let i = 0; i < 20; i++) {
+                const age = parseFloat(document.getElementById('age' + i).value);
+                if (!isNaN(age) && age >= 0) {
+                    sum += age;
+                }
+            }
+            document.getElementById('result').innerText = 'Soma das Idades: ' + sum;
+        }
+
+        window.onload = createInputs;
+    </script>
+</body>
+</html>
