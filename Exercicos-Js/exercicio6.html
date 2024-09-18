@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +14,13 @@
 
     <script>
         function mostrarAntecessorESucessor() {
-            var numero = parseInt(document.getElementById('numero').value);
-
-            
-            if (isNaN(numero)) {
-                document.getElementById('resultado').innerText = "Por favor, insira um número válido.";
-                return;
-            }
+            var numero = parseInt(document.getElementById('numero').value) || 0;
 
             var antecessor = numero - 1;
             var sucessor = numero + 1;
 
             document.getElementById('resultado').innerText = 
-                `O antecessor de ${numero} é ${antecessor} e o sucessor é ${sucessor}.`;
+                'O antecessor de ' + numero + ' é ' + antecessor + ' e o sucessor é ' + sucessor + '.';
         }
     </script>
 </body>
